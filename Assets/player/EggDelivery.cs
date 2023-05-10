@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class EggDelivery : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class EggDelivery : MonoBehaviour
     private bool deliveredEgg = false;
     private int score = 0;
     private bool isCarryingEgg = false;
+    private Vector3 lastSafeDropPosition;
 
     public Text scoreText;
 
@@ -60,4 +62,30 @@ public class EggDelivery : MonoBehaviour
             deliveredEgg = false;
         }
     }
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Obstacle")
+        {
+            // If the player collides with an obstacle while carrying an egg
+            if (isCarryingEgg)
+            {
+               
+                heldEgg.transform.parent = null;
+                Destroy(heldEgg);
+                isCarryingEgg = false;
+
+                // Respawn the player at the base location
+                transform.position = deliveryLocation.position;
+
+                Debug.Log("You Died and lost your Egg.");
+            }
+            else
+            {
+                transform.position = deliveryLocation.position;
+
+                Debug.Log("You Died.");
+            }
+        }
+    }
+
 }
