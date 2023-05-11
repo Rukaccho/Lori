@@ -1761,6 +1761,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wyspa (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 21ec707376564054285fc9499e02ec5a, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21ec707376564054285fc9499e02ec5a, type: 3}
 --- !u!1001 &183019885
@@ -3171,6 +3175,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wyspa
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 21ec707376564054285fc9499e02ec5a, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21ec707376564054285fc9499e02ec5a, type: 3}
 --- !u!1 &346323428 stripped
@@ -4320,6 +4328,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 21ec707376564054285fc9499e02ec5a, type: 3}
       propertyPath: m_Name
       value: wyspa (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 21ec707376564054285fc9499e02ec5a, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21ec707376564054285fc9499e02ec5a, type: 3}
@@ -5530,6 +5542,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 21ec707376564054285fc9499e02ec5a, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21ec707376564054285fc9499e02ec5a, type: 3}
 --- !u!1001 &746786563
@@ -5602,6 +5618,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 21ec707376564054285fc9499e02ec5a, type: 3}
       propertyPath: m_Name
       value: wyspa (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 21ec707376564054285fc9499e02ec5a, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21ec707376564054285fc9499e02ec5a, type: 3}
@@ -14185,6 +14205,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 21ec707376564054285fc9499e02ec5a, type: 3}
       propertyPath: m_Name
       value: wyspa (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 21ec707376564054285fc9499e02ec5a, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21ec707376564054285fc9499e02ec5a, type: 3}
