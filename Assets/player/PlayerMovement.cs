@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float playerSpeed = 4.0f;
     public float jumpHeight = 1.0f;
     public float maxSpeed;
-    private float gravityValue = -9.81f;
+
 
     public CameraMovement CameraObject;
     private void Start()

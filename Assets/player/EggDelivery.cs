@@ -16,7 +16,7 @@ public class EggDelivery : MonoBehaviour
     private bool deliveredEgg = false;
     private int score = 0;
     private bool isCarryingEgg = false;
-    private Vector3 lastSafeDropPosition;
+    public ParticleController particleController;
 
     public Text scoreText;
 
@@ -55,6 +55,7 @@ public class EggDelivery : MonoBehaviour
             isCarryingEgg = false;
             Debug.Log("Delivered egg!");
             UpdateScoreText();
+            particleController.PlayParticles();
         }
 
         if (deliveredEgg && Vector3.Distance(transform.position, deliveryLocation.position) > deliveryDistance)
