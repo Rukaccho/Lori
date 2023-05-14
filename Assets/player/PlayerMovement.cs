@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float playerSpeed = 4.0f;
     public float jumpHeight = 1.0f;
     public float maxSpeed;
-    private float gravityValue = -9.81f;
+
 
     public CameraMovement CameraObject;
     private void Start()
@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
         float VerticalMovement = Input.GetAxis("Vertical");
 
         Vector3 move = (CameraObject.characterForward * VerticalMovement) + CameraObject.characterRight * HorizontalMovement;
-        if(rb.velocity.magnitude < maxSpeed)
+        if (rb.velocity.magnitude < maxSpeed)
             rb.AddForce(move * playerSpeed);
 
         if (move != Vector3.zero)
@@ -33,9 +33,24 @@ public class PlayerMovement : MonoBehaviour
             gameObject.transform.forward = move;
         }
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetKeyDown(KeyCode.Space) && groundedPlayer)
         {
-            rb.AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
+            Jump();
+        }
+
+    }
+    private void Jump()
+    {
+        rb.AddForce(Vector2.up * jumpHeight, ForceMode.Impulse);
+        groundedPlayer = false;
+
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Floor")
+        {
+            groundedPlayer = true;
+
         }
     }
 }
