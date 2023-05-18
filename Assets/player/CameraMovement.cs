@@ -10,7 +10,7 @@ public class CameraMovement : MonoBehaviour
     public Vector3 targetOffset;
     public Vector3 characterForward;
     public Vector3 characterRight;
-    public LayerMask characterMask;
+    public LayerMask groundMask;
 
     private void Start()
     {
@@ -24,10 +24,9 @@ public class CameraMovement : MonoBehaviour
         float rotateHorizontal = Input.GetAxis("Mouse X");
         transform.RotateAround(target.transform.position, Vector3.up, rotateHorizontal * cameraSpeed);
 
-        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, Mathf.Infinity))
+        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, Mathf.Infinity, groundMask))
         {
-            characterForward = Vector3.Cross(transform.right, hit.normal);
-            Debug.DrawLine(transform.position, transform.position+ characterForward);
+            characterForward = Vector3.Cross(transform.right, Vector3.up);
             characterRight = transform.right;
         }
     }

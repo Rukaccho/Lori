@@ -11,8 +11,8 @@ public class EggDelivery : MonoBehaviour
     public float pickupDistance = 2f;
     public float deliveryDistance = 2f;
 
-    public GameObject eggPrefab;
-    private GameObject heldEgg;
+    public EggzController eggPrefab;
+    private EggzController heldEgg;
     private bool deliveredEgg = false;
     private int score = 0;
     private bool isCarryingEgg = false;
@@ -33,6 +33,9 @@ public class EggDelivery : MonoBehaviour
     {
 
     }
+
+
+    //Refactor na u¿ycie triggerów
     void Update()
     {
         foreach (Transform pickupLocation in pickupLocations)
@@ -48,10 +51,9 @@ public class EggDelivery : MonoBehaviour
 
         if (isCarryingEgg && Vector3.Distance(transform.position, deliveryLocation.position) < deliveryDistance)
         {
-            Destroy(heldEgg);
             deliveredEgg = true;
-            score++;
-
+            score += heldEgg.egg.worth;
+            Destroy(heldEgg.gameObject);
             isCarryingEgg = false;
             Debug.Log("Delivered egg!");
             UpdateScoreText();
@@ -63,6 +65,7 @@ public class EggDelivery : MonoBehaviour
             deliveredEgg = false;
         }
     }
+
     void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Obstacle")
@@ -72,11 +75,12 @@ public class EggDelivery : MonoBehaviour
             {
                
                 heldEgg.transform.parent = null;
-                Destroy(heldEgg);
+                Destroy(heldEgg.gameObject);
                 isCarryingEgg = false;
 
                 // Respawn the player at the base location
                 transform.position = deliveryLocation.position;
+
 
                 Debug.Log("You Died and lost your Egg.");
             }

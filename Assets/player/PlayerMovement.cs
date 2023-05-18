@@ -30,7 +30,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (move != Vector3.zero)
         {
-            gameObject.transform.forward = move;
+            //gameObject.transform.forward = move;
+
+            rb.MoveRotation(Quaternion.LookRotation(move, Vector3.up));
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && groundedPlayer)
