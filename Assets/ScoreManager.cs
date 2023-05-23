@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    public EggDelivery eggDelivery;
+    public NewEggDelivery newEggDelivery;
     public TextMeshProUGUI scoreText;
 
     void Start()
@@ -19,8 +19,8 @@ public class ScoreManager : MonoBehaviour
         UpdateScoreText();
     }
 
-    void UpdateScoreText()
+    public void UpdateScoreText()
     {
-        scoreText.text = "Score: " + eggDelivery.GetScore().ToString();
+        scoreText.text = "Score: " + newEggDelivery.GetScore().ToString();
     }
 }
