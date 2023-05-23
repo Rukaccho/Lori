@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 481983854644557578}
   - component: {fileID: 3539691139584030895}
   - component: {fileID: 1656046067072896101}
+  - component: {fileID: 2741322656191556590}
   m_Layer: 0
   m_Name: palma2
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2741322656191556590
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007550053650247088}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8132314516314171195, guid: 85d84a476ad935d4289a7eb9ef984a6a, type: 3}
