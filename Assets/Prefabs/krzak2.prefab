@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7211528857350066562}
   - component: {fileID: 6033597394147040807}
   - component: {fileID: 8385512931572034285}
+  - component: {fileID: 2315884124475155058}
   m_Layer: 0
   m_Name: krzak2
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2315884124475155058
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8025326459338099512}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1375838302621637054, guid: 9a62d13d161f1664fa26c90a1292817d, type: 3}

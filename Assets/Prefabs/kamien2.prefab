@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7179089082599085316}
   - component: {fileID: 6057030262753794721}
   - component: {fileID: 8352510068489186923}
+  - component: {fileID: 249810373475668318}
   m_Layer: 0
   m_Name: kamien2
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &249810373475668318
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7560118632962084798}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5677067880998918037, guid: 3707fcbc66004144c9bca22d60ba5958, type: 3}
