@@ -15,7 +15,8 @@ public class NewEggDelivery : MonoBehaviour
     public ParticleController particleController;
     public float deliveryDistance = 2f;
     public GameEvent playerDeliveredEgg;
-
+    [SerializeField] private AudioSource collectSoundEffect;
+    [SerializeField] private AudioSource returnSoundEffect;
     public int GetScore()
     {
         return score;
@@ -32,6 +33,7 @@ public class NewEggDelivery : MonoBehaviour
             heldEgg.transform.SetParent(playerPosition);
             isCarryingEgg = true;
             Debug.Log("Picked up an egg");
+            collectSoundEffect.Play();
         }
 
     }
@@ -47,6 +49,7 @@ public class NewEggDelivery : MonoBehaviour
             Debug.Log("Delivered egg!");
             UpdateScoreText();
             particleController.PlayParticles();
+            returnSoundEffect.Play();
         }
 
         if (deliveredEgg && Vector3.Distance(playerPosition.position, deliveryLocation.position) > deliveryDistance)

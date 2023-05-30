@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     public float jumpHeight = 1.0f;
     public float maxSpeed;
 
+    [SerializeField] private AudioSource jumpSoundEffect;
+
 
     public CameraMovement CameraObject;
     private void Start()
@@ -37,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && groundedPlayer)
         {
+            jumpSoundEffect.Play();
             Jump();
         }
 
