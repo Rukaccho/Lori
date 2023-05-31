@@ -39,8 +39,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && groundedPlayer)
         {
-            jumpSoundEffect.Play();
             Jump();
+            jumpSoundEffect.Play();
+
         }
 
     }
