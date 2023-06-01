@@ -1,81 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class NewEggDelivery : MonoBehaviour
 {
-    public Transform deliveryLocation;
     public Transform playerPosition;
-    public static bool isCarryingEgg = false;
+    public BoolValue isCarryingEgg;
     public EggzController eggPrefab;
     private EggzController heldEgg;
-    private bool deliveredEgg = false;
-    private int score = 0;
-    public ParticleController particleController;
-    public float deliveryDistance = 2f;
-    public GameEvent playerDeliveredEgg;
     [SerializeField] private AudioSource collectSoundEffect;
-    [SerializeField] private AudioSource returnSoundEffect;
-    public int GetScore()
-    {
-        return score;
-    }
-    void UpdateScoreText()
-    {
-
-    }
+  
+   
     private void OnTriggerEnter(Collider collider)
     {
-        if (!isCarryingEgg)
+        if (!isCarryingEgg.value)
         {
             heldEgg = Instantiate(eggPrefab, playerPosition.position, Quaternion.identity);
             heldEgg.transform.SetParent(playerPosition);
-            isCarryingEgg = true;
+            isCarryingEgg.value = true;
             Debug.Log("Picked up an egg");
             collectSoundEffect.Play();
         }
 
     }
-    void Update()
-    {
-        if (isCarryingEgg && Vector3.Distance(playerPosition.position, deliveryLocation.position) < deliveryDistance)
-        {
-            playerDeliveredEgg.Fire();
-            deliveredEgg = true;
-            score += heldEgg.egg.worth;
-            Destroy(heldEgg.gameObject);
-            isCarryingEgg = false;
-            Debug.Log("Delivered egg!");
-            UpdateScoreText();
-            particleController.PlayParticles();
-            returnSoundEffect.Play();
-        }
-
-        if (deliveredEgg && Vector3.Distance(playerPosition.position, deliveryLocation.position) > deliveryDistance)
-        {
-            deliveredEgg = false;
-        }
-
-
-    }
-    void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.tag == "Obstacle")
-        {
-            if (isCarryingEgg)
-            {
-                heldEgg.transform.parent = null;
-                Destroy(heldEgg.gameObject);
-                isCarryingEgg = false;
-                Debug.Log("You Died and lost your Egg.");
-            }
-            else
-            {
-                //transform.position = deliveryLocation.position;
-
-                Debug.Log("You Died.");
-            }
-        }
-    }
+   
 }

@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class PlayerDeath : MonoBehaviour
 {
-    public static bool isCarryingEgg = false;
+    public BoolValue isCarryingEgg;
     private EggzController heldEgg;
     public Transform deliveryLocation;
     void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Obstacle")
         {
-            if (isCarryingEgg)
+            if (isCarryingEgg.value)
             {
+                heldEgg = GetComponentInChildren<EggzController>();
+
                 heldEgg.transform.parent = null;
                 Destroy(heldEgg.gameObject);
-                isCarryingEgg = false;
+                isCarryingEgg.value = false;
                 Debug.Log("You Died and lost your Egg.");
                 transform.position = deliveryLocation.position;
             }
