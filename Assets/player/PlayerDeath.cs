@@ -7,6 +7,7 @@ public class PlayerDeath : MonoBehaviour
     public BoolValue isCarryingEgg;
     private EggzController heldEgg;
     public Transform deliveryLocation;
+    public ScoreValue totalScore;
     void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Obstacle")
@@ -19,6 +20,7 @@ public class PlayerDeath : MonoBehaviour
                 Destroy(heldEgg.gameObject);
                 isCarryingEgg.value = false;
                 Debug.Log("You Died and lost your Egg.");
+                totalScore.score--;
                 transform.position = deliveryLocation.position;
             }
             else
@@ -26,6 +28,7 @@ public class PlayerDeath : MonoBehaviour
                 transform.position = deliveryLocation.position;
 
                 Debug.Log("You Died.");
+                totalScore.score--;
             }
         }
     }
