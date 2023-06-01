@@ -17,6 +17,7 @@ public class PlayerDeath : MonoBehaviour
                 Destroy(heldEgg.gameObject);
                 isCarryingEgg = false;
                 Debug.Log("You Died and lost your Egg.");
+                transform.position = deliveryLocation.position;
             }
             else
             {
