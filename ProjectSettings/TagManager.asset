@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Obstacle
   - Floor
+  - GameMusic
   layers:
   - Default
   - TransparentFX
