@@ -12,7 +12,7 @@ public class GameManagerScript : MonoBehaviour
     }
     public void restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(1);
     }
     
     public void MainMenu()

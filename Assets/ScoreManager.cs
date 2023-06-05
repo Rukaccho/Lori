@@ -22,6 +22,6 @@ public class ScoreManager : MonoBehaviour
 
     public void UpdateScoreText()
     {
-        scoreText.text = "Score: " + totalScore.score.ToString();
+        scoreText.text = "" + totalScore.score.ToString();
     }
 }
