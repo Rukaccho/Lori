@@ -24,4 +24,10 @@ public class ScoreManager : MonoBehaviour
     {
         scoreText.text = "" + totalScore.score.ToString();
     }
+
+    public void RestartScore()
+    {
+        totalScore.ResetScore();
+    }
+
 }
