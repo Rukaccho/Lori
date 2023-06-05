@@ -652,6 +652,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 854757685}
     m_Modifications:
+    - target: {fileID: 5532322347425926776, guid: 6681da68ba7e58b479e0310f3878865d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 07271cd102e294243bc597534ee22299, type: 2}
     - target: {fileID: 6324810540932181933, guid: 6681da68ba7e58b479e0310f3878865d, type: 3}
       propertyPath: m_Name
       value: dino2 (1)
@@ -890,6 +894,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 785480645}
     m_Modifications:
+    - target: {fileID: 5532322347425926776, guid: 6681da68ba7e58b479e0310f3878865d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 07271cd102e294243bc597534ee22299, type: 2}
     - target: {fileID: 6324810540932181933, guid: 6681da68ba7e58b479e0310f3878865d, type: 3}
       propertyPath: m_Name
       value: dino2 (2)
@@ -12726,6 +12734,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 974340780}
     m_Modifications:
+    - target: {fileID: 5532322347425926776, guid: 6681da68ba7e58b479e0310f3878865d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 07271cd102e294243bc597534ee22299, type: 2}
     - target: {fileID: 6324810540932181933, guid: 6681da68ba7e58b479e0310f3878865d, type: 3}
       propertyPath: m_Name
       value: dino2 (1)
