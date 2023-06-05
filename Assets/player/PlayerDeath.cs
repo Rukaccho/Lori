@@ -8,6 +8,7 @@ public class PlayerDeath : MonoBehaviour
     private EggzController heldEgg;
     public Transform deliveryLocation;
     public ScoreValue totalScore;
+    [SerializeField] private AudioSource deathSoundEffect;
     void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Obstacle")
@@ -30,6 +31,7 @@ public class PlayerDeath : MonoBehaviour
                 Debug.Log("You Died.");
                 totalScore.score--;
             }
+            deathSoundEffect.Play();
         }
     }
 }
