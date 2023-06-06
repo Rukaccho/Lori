@@ -963,7 +963,7 @@ RectTransform:
   m_GameObject: {fileID: 742750457}
   m_LocalRotation: {x: -0, y: -0, z: 0.0064266836, w: 0.9999794}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2828, y: 2.0192554, z: 1.2828}
+  m_LocalScale: {x: 2.4882472, y: 2.0192554, z: 1.2828}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 572713198}
@@ -1014,13 +1014,13 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 742750460}
+  m_TargetGraphic: {fileID: 1170410743}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 929311456}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: Quit
+        m_MethodName: PlayGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1062,7 +1062,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: aa3fe0c0f129f8d4d969fa9b6e2fba8c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 55eafb46bfc644543be454344a88d50e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
