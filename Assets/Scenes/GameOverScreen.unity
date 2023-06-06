@@ -711,7 +711,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 700145663}
         m_TargetAssemblyTypeName: GameManagerScript, Assembly-CSharp
         m_MethodName: restart
         m_Mode: 1
